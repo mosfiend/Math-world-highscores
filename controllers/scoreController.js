@@ -5,7 +5,7 @@ const Score = require("../models/scoreModel");
 const setScore = (req, res) => {
   console.log(req.body, req);
   const score = Score.create({
-    name: "hi",
+    name: "hi" + score,
     score: 49,
   });
 
