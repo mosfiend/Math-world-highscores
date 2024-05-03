@@ -1,11 +1,11 @@
 const Score = require("../models/scoreModel");
 // @desc    Set trial
-// @route   POST /api/trials
+// @route   POST /api/scores
 // @access  Private
 const setScore = (req, res) => {
   const score = Score.create({
-    name: "new",
-    score: 25,
+    name: req.body.name,
+    score: req.body.score,
   });
 
   res.status(200).json(score);
