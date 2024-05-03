@@ -3,12 +3,13 @@ const Score = require("../models/scoreModel");
 // @route   POST /api/scores
 // @access  Private
 const setScore = (req, res) => {
+  console.log(req.body, req);
   const score = Score.create({
-    name: req.body.name,
-    score: req.body.score,
+    name: "hi",
+    score: 49,
   });
 
-  res.status(200).json(score);
+  // res.status(200).json(score);
 };
 
 const getScore = (req, res) => {
