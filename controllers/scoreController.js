@@ -4,8 +4,8 @@ const Score = require("../models/scoreModel");
 // @access  Private
 const setScore = (req, res) => {
   const score = Score.create({
-    name: "him",
-    score: 15,
+    name: "new",
+    score: 25,
   });
 
   res.status(200).json(score);
@@ -14,7 +14,7 @@ const setScore = (req, res) => {
 const getScore = (req, res) => {
   const score = Score.create({
     name: "him",
-    score: 15,
+    score: 30,
   });
 };
 
