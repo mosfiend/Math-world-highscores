@@ -7,16 +7,13 @@ const setScore = (req, res) => {
     name: req.body.name,
     score: req.body.score,
   });
-  console.log("respond", req.body);
   res.status(200).json({ other: "hi", reqBody: req.body || "nothing" });
 };
 
 const getScore = async (req, res) => {
   const scores = await Score.find({});
 
-  console.log("if found:", req, res);
-
-  res.status(200).json({ other: "hi", bod: req.body || "nothing" });
+  res.status(200).json(scores);
 };
 
 // @access  Private
