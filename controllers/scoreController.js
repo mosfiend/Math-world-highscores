@@ -4,8 +4,8 @@ const Score = require("../models/scoreModel");
 // @access  Private
 const setScore = (req, res) => {
   const score = Score.create({
-    name: "hi",
-    score: Math.random(),
+    name: req.body.name,
+    score: req.body.score,
   });
   console.log("respond", req.body);
   res.status(200).json({ other: "hi", reqBody: req.body || "nothing" });
