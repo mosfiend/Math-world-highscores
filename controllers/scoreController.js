@@ -8,7 +8,7 @@ const setScore = (req, res) => {
     score: Math.random(),
   });
   console.log("respond", req.body);
-  res.status(200).json(score);
+  res.status(200).json({ other: "hi", reqBody: req.body || "nothing" });
 };
 
 const getScore = async (req, res) => {
