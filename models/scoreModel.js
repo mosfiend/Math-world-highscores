@@ -4,13 +4,13 @@ const Schema = mongoose.Schema;
 const scoreSchema = Schema(
   {
     name: {
-      type: String,
+      type: Schema.Types.Mixed,
       required: [true, ""],
+      // unique: true,
     },
     score: {
       type: Number,
       required: [true, ""],
-      unique: true,
     },
   },
   {

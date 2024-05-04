@@ -3,21 +3,23 @@ const Score = require("../models/scoreModel");
 // @route   POST /api/scores
 // @access  Private
 const setScore = (req, res) => {
-  console.log(req.body, req);
   const score = Score.create({
-    name: "hi" + score,
-    score: 49,
+    name: "hi",
+    score: Math.random(),
   });
-
-  // res.status(200).json(score);
+  console.log("respond", req.body);
+  res.status(200).json(score);
 };
 
-const getScore = (req, res) => {
-  const score = Score.create({
-    name: "him",
-    score: 30,
-  });
+const getScore = async (req, res) => {
+  const scores = await Score.find({});
+
+  console.log("if found:", req, res);
+
+  res.status(200).json({ other: "hi", bod: req.body || "nothing" });
 };
+
+// @access  Private
 
 module.exports = {
   getScore,
