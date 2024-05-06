@@ -6,11 +6,12 @@ const scoreSchema = Schema(
     name: {
       type: Schema.Types.Mixed,
       required: [true, ""],
-      // unique: true,
+      unique: true,
     },
     score: {
       type: Number,
       required: [true, ""],
+      unique: false,
     },
   },
   {
