@@ -10,8 +10,7 @@ const scoreSchema = Schema(
     },
     score: {
       type: Number,
-      required: [true, ""],
-      unique: false,
+      // required: [true, ""],
     },
   },
   {
