@@ -1,8 +1,10 @@
 "use strict";
 
 const mongoose = require("mongoose");
-const express = require("express"),
-  app = express();
+const express = require("express");
+const cors = require("cors");
+
+app = express();
 app.use(express.json());
 
 /////////// CONNECT TO Database
@@ -16,8 +18,8 @@ mongoose
 
 // SCORE SCHEMA
 
+app.use(cors());
 app.use("/api/scores", require("./routes/scoreRoutes"));
-
 // var GameEntry = mongoose.model("GameEntry", GameEntrySchema);
 //
 // function getList(gameId, options, cb) {
