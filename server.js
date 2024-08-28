@@ -20,6 +20,7 @@ mongoose
 
 app.use(cors());
 app.use("/api/scores", require("./routes/scoreRoutes"));
+app.use("/api/blockyScores", require("./routes/blockyScoreRoutes"));
 // var GameEntry = mongoose.model("GameEntry", GameEntrySchema);
 //
 // function getList(gameId, options, cb) {
