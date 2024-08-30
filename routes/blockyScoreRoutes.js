@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const { getScore, setScore } = require("../controllers/scoreController");
+const { getScore, setScore } = require("../controllers/blockyScoreController");
 
-router.route("/blocky").post(setScore).get(getScore);
+router.route("/").post(setScore).get(getScore);
 // router.get("/", getMe);
 // router.get("/", testMe);
 

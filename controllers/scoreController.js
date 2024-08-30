@@ -1,4 +1,4 @@
-const Score = require("../models/scoreModel");
+const Score = require("../models/scoreModel").Score;
 // @desc    Set trial
 // @route   POST /api/scores
 // @access  Private

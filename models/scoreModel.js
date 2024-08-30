@@ -17,5 +17,6 @@ const scoreSchema = Schema(
     timestamps: true,
   },
 );
-
-module.exports = mongoose.model("Score", scoreSchema);
+Score = mongoose.model("Score", scoreSchema);
+BlockyScore = mongoose.model("BlockyScore", scoreSchema);
+module.exports = { Score, BlockyScore };
